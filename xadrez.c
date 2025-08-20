@@ -2,41 +2,46 @@
 
 int main() {
     
-    printf("DESAFIO: NÍVEL AVENTUREIRO \n");
+    
+    printf("DESAFIO: NÍVEL MESTRE \n");
     printf(" \n ");
 
-    printf("Movento o cavalo 2 casas para baixo e uma casa para a esquerda com loop for aninhado \n");
+    printf("Movendo a torre através de uma função recursiva \n");
     printf(" \n ");
- 
-    for (int repeticoesLoop=0; repeticoesLoop<1; repeticoesLoop++){ //Número de repetições do loop
 
-      for (int repeticoesCondicao = 0; repeticoesCondicao<2; repeticoesCondicao++) //Número de repetições da condição, para que o loop principal volte a repetir (caso haja mais de uma repetição)
-      {
-         printf("Baixo\n");
+    int CasasMovidasTorre =3; //Função declarada na linha 3 e chamada aqui
+    moverTorre(CasasMovidasTorre); // O parâmetro aqui indicado "5",será o valor passado na função mover torre. Movendo a torre para a direita  5 casas
+
+    printf("Movendo o bispo através de uma função recursiva \n");
+    printf(" \n ");
+       
+    int CasasMovidasBispo =3; //Função declarada na linha 15 e chamada aqui
+       
+    moverBispo(CasasMovidasBispo); // O parâmetro aqui indicado "7",será o valor passado na função mover bispo. Movendo o bispo para a diagonal superior direita  7 casas
+
+       
+    printf("Movendo a rainha através de uma função recursiva \n");
+    printf(" \n ");
+
+    int CasasMovidasRainha =4; //Função declarada na linha 29 e chamada aqui
+    moverRainha(CasasMovidasRainha); // O parâmetro aqui indicado "8",será o valor passado na função mover rainha. Movendo o bispo para cima 8 casas
+
+
+   //----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    printf("Movendo o bispo através de loop for aninhado \n");
+    printf(" \n ");
+
+    for (int i=0;i<3;i++){}//Loop externo move o bispo 3 vezes para cima
+        printf("Cima \n"); 
+        for (int j = 0; j<1; j++) //Loop externo move o bispo 3 vezes para a direita
+    {
+        printf("Direita \n");
       }
 
-      printf("Esquerda\n");
+
    }
-
-   //----------------------------------------------------------------------------------------------
-
-   printf("Movento o cavalo 2 casas cima e uma casa para a direita com loop while aninhado \n");
-   printf(" \n ");
-
-   int i = 0;
-   
-   
-    while (i<1) { //O primeiro loop while fará o loop se repetir uma vez, pois a condição i é de 0 até 1
-       int j = 0;
-
-       while (j<2){ //O segundo loop while irá imprimir a mensagem 2 vezes, pois a condição j é de 0 até 2
-
-      printf("Cima \n");
-         j++; // Incremento para que o valor inicial de j receba +1
-      }
-      printf("Direta \n"); //Depois que o loop for concluído e rodar uma vez, a mensagem fora do loop irá aparecer por padrão
-      i++; // Incremento para que o valor inicial de i receba +1
-   }
+      
 
     return 0;
 }
